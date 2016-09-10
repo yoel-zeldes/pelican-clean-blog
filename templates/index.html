@@ -40,6 +40,7 @@
 {% endblock header %}
 
 {% block content %}
+    {% include 'welcome.html' %}
     {% for article in articles_page.object_list %}
         <div class="post-preview">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
