@@ -40,7 +40,12 @@
 {% endblock header %}
 
 {% block content %}
-    {% include 'welcome.html' %}
+    <p>Hi there, and welcome to my blog.</p>
+    <p>Here you'll find resources about data science, software engineering, and life. Well, maybe not life...</p>
+    <p>Hope you enjoy.</p>
+    <hr />
+
+    {% include 'subscribe.html' %}
     {% for article in articles_page.object_list %}
         <div class="post-preview">
             <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
